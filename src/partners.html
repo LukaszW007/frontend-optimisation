@@ -237,7 +237,19 @@
                   </div>
                   <div class="col-50 left">
                       <div>
-                          <div class="animation" data-animation-file="/animation.json"></div>
+                        <script>
+                          performance.mark('animation-onload')
+                        </script>
+                          <div class="animation" data-animation-file="/animation.json" ></div>
+                        <script>
+                          performance.mark('animation-loaded');
+                          performance.measure('durationAnimation', 'animation-onload','animation-loaded');
+                          console.log(performance.getEntriesByName('animation-onload', 'mark'));
+                          console.log(performance.getEntriesByName('durationAnimation', 'measure'));
+                          performance.clearMarks();
+                          performance.clearMeasures();
+
+                        </script>
                       </div>
                   </div>
             </div>
