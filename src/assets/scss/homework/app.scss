@@ -46,6 +46,15 @@
 @import "modules/_popup-lp";
 @import "modules/_error404";
 
+@font-face {
+  font-family: 'Montserrat';
+  src:  local('Montserrat Thin'), local('Montserrat-Thin'),
+        url('./src/assets/fonts/Montserrat/subset-Montserrat-Thin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 .overlay {
 	display: none;
 	position: fixed;

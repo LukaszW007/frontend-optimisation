@@ -8,8 +8,47 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex, nofollow">
 
-    <link href="/assets/css/homework/app.css" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/Montserrat/subset-Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="preload" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <link rel="preload" as="style" href="https://use.typekit.net/bre2xth.css">
+
+
+    <style>
+      @font-face {
+        font-family: 'Montserrat';
+        src: local('Montserrat Thin'), local('Montserrat-Thin'),
+        url('./src/assets/fonts/Montserrat/subset-Montserrat-Thin.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Roboto';
+        src: local('Roboto'),
+        url('https://fonts.googleapis.com/css2?family=Roboto&display=swap') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
+
+    <script>
+      (function(global){
+        'use strict';
+        global.toolbox.router.get('/(.*)', global.toolbox.fastest, {
+          origin: /\.(?:googleapis|gstatic)\.com$/
+        });
+        global.toolbox.router.get('/(.*)', global.toolbox.fastest, {
+          origin: /\.(?:typekit)\.net$/
+        });
+      })(self);
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -18,19 +57,8 @@
     })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
     <!-- End Google Tag Manager -->
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-    </script>
-    <!--End of Tawk.to Script-->
+    <link href="/assets/css/homework/app.css" rel="stylesheet">
+
   </head>
   <body>
 
@@ -752,13 +780,30 @@
 
     <script defer src="https://js.stripe.com/v3/"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet">
     <script src="//use.typekit.net/lna1ryl.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
 
     <script defer src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
-    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
+    <script>
+      var media_url = '/assets/', site_url = '/';
+      $(document).load().scrollTop(0);
+    </script>
     <script defer data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script defer type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

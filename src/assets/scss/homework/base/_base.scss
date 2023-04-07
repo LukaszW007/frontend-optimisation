@@ -2,6 +2,14 @@
 /*
    ---------------------- BASE
 */
+@font-face {
+  font-family: 'Montserrat';
+  src:  local('Montserrat Thin'), local('Montserrat-Thin'),
+  url('subset-Montserrat-Thin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 html body {
   font-family: "Montserrat";

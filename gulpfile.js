@@ -21,7 +21,7 @@ const gulp                      = require('gulp'),
       del                       = require('del'),
       sourcemaps                = require('gulp-sourcemaps'),
       plumber                   = require('gulp-plumber'),
-      sass                      = require('gulp-sass'),
+      sass                      = require('gulp-sass')(require('node-sass')),
       less                      = require('gulp-less'),
       stylus                    = require('gulp-stylus'),
       autoprefixer              = require('gulp-autoprefixer'),
@@ -191,6 +191,7 @@ gulp.task('write-service-worker', (cb) => {
     staticFileGlobs: [
       // Add/remove glob patterns to match your directory setup.
       `${dist_folder}assets/fonts/*.woff2`,
+      `${dist_folder}assets/fonts/**/*.woff2`,
       `${dist_folder}assets/css/**/*.css`
     ],
     // Translates a static file path to the relative URL that it's served from.

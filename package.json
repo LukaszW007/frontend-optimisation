@@ -50,7 +50,6 @@
     "gulp-less": "^4.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-purgecss": "^3.0.0",
-    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
@@ -59,7 +58,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "fs-extra": "^9.0.1"
+    "fs-extra": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0"
   },
   "engines": {
     "node": ">=10"
